@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Aidely - Empleados digitales para automatizar tu pyme</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -28,7 +28,7 @@
                         "full": "9999px"
                     },
                     "fontFamily": {
-                        "headline": ["Sora", "sans-serif"],
+                       "headline": ["Space Grotesk", "sans-serif"], 
                         "body": ["Inter", "sans-serif"]
                     }
                 },
@@ -71,30 +71,137 @@
 </div>
 </nav>
 <!-- 2. Hero Section -->
-<header class="pt-40 pb-24 hero-gradient overflow-hidden">
-<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="flex flex-col gap-8">
-<h1 class="font-headline text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] tracking-tight">
-                No pierdas más clientes por responder tarde
-            </h1>
-<p class="text-lg text-slate-600 leading-relaxed max-w-xl">
-                Aidely instala empleados digitales para pymes que captan consultas, clasifican oportunidades y te avisan cuando un cliente necesita atención inmediata.
-            </p>
-<div class="flex flex-col sm:flex-row gap-4 pt-4">
-  <a href="#diagnostico" class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-200">
-    Solicitar diagnóstico gratuito
-  </a>
+<header class="pt-40 pb-24 bg-gradient-to-b from-slate-50 via-white to-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
+      <!-- Left Content -->
+      <div>
+        <span class="inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700 border border-blue-100">
+          Empleados digitales para pequeñas pymes
+        </span>
 
-  <a href="#leo" class="rounded-2xl border border-slate-200 bg-white px-6 py-4 font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50">
-    Ver cómo trabaja Leo
-  </a>
+        <h1 class="mt-6 font-headline text-5xl md:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight">
+          Organiza clientes, responde antes y no pierdas oportunidades
+        </h1>
+
+        <p class="mt-6 text-xl text-slate-600 leading-relaxed max-w-2xl">
+          Aidely instala empleados digitales que trabajan contigo. Leo recibe solicitudes, las ordena y te ayuda a decidir qué atender primero.
+        </p>
+
+        <p class="mt-4 text-base text-slate-500 max-w-2xl">
+          Menos caos. Más orden. Más tiempo para centrarte en tu negocio.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="#diagnostico" class="inline-flex items-center justify-center rounded-2xl bg-primary px-7 py-4 text-white font-bold shadow-lg shadow-blue-200 hover:bg-blue-700 hover:scale-[1.02] transition-all">
+            Solicitar diagnóstico
+          </a>
+
+          <a href="#leo" class="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-7 py-4 text-slate-800 font-bold hover:bg-slate-50 transition-all">
+            Ver cómo trabaja Leo
+          </a>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl">
+          <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <p class="text-sm font-semibold text-slate-900">Ahorra tiempo</p>
+            <p class="text-sm text-slate-500 mt-1">Menos tareas repetitivas y más claridad.</p>
+          </div>
+
+          <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <p class="text-sm font-semibold text-slate-900">Ordena leads</p>
+            <p class="text-sm text-slate-500 mt-1">Cada contacto queda mejor clasificado.</p>
+          </div>
+
+          <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <p class="text-sm font-semibold text-slate-900">Detecta oportunidades</p>
+            <p class="text-sm text-slate-500 mt-1">Sabrás qué atender primero.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual -->
+      <div class="relative">
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-blue-100 rounded-full blur-3xl opacity-60"></div>
+        <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-emerald-100 rounded-full blur-3xl opacity-60"></div>
+
+        <div class="relative rounded-[32px] border border-slate-200 bg-white p-8 shadow-2xl">
+          <div class="flex items-center justify-between mb-8">
+            <div>
+              <p class="text-sm text-slate-500">Empleado digital</p>
+              <h3 class="font-headline text-3xl font-bold text-slate-900">Leo</h3>
+              <p class="text-sm text-slate-500">Atención y ventas</p>
+            </div>
+
+            <div class="rounded-2xl bg-emerald-50 px-4 py-2 text-sm font-bold text-emerald-700 border border-emerald-100">
+              Activo
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="rounded-2xl bg-slate-50 p-5 border border-slate-100">
+              <p class="text-sm text-slate-500">Leads revisados</p>
+              <p class="text-3xl font-extrabold text-slate-900 mt-2">24</p>
+            </div>
+
+            <div class="rounded-2xl bg-slate-50 p-5 border border-slate-100">
+              <p class="text-sm text-slate-500">Leads calientes</p>
+              <p class="text-3xl font-extrabold text-red-500 mt-2">6</p>
+            </div>
+
+            <div class="rounded-2xl bg-slate-50 p-5 border border-slate-100">
+              <p class="text-sm text-slate-500">Borradores preparados</p>
+              <p class="text-3xl font-extrabold text-blue-600 mt-2">5</p>
+            </div>
+
+            <div class="rounded-2xl bg-slate-50 p-5 border border-slate-100">
+              <p class="text-sm text-slate-500">Seguimientos pendientes</p>
+              <p class="text-3xl font-extrabold text-amber-500 mt-2">3</p>
+            </div>
+          </div>
+
+          <div class="rounded-3xl bg-slate-900 p-6 text-white">
+            <p class="text-sm text-slate-300 mb-2">Cómo ayuda Leo</p>
+            <p class="text-lg font-semibold leading-relaxed">
+              Recibe solicitudes, las organiza y te muestra qué oportunidad atender primero.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust Bar -->
+    <div class="mt-20">
+      <p class="text-center text-sm font-semibold uppercase tracking-wide text-slate-400 mb-6">
+        Pensado para negocios que ya trabajan con herramientas como estas
+      </p>
+
+  <div class="flex flex-wrap items-center justify-center gap-4">
+  <div class="rounded-2xl border border-emerald-200 bg-emerald-50 px-5 py-3 text-sm font-semibold text-emerald-700 shadow-sm">
+    WhatsApp
+  </div>
+
+  <div class="rounded-2xl border border-red-200 bg-red-50 px-5 py-3 text-sm font-semibold text-red-700 shadow-sm">
+    Gmail
+  </div>
+
+  <div class="rounded-2xl border border-sky-200 bg-sky-50 px-5 py-3 text-sm font-semibold text-sky-700 shadow-sm">
+    Telegram
+  </div>
+
+  <div class="rounded-2xl border border-blue-200 bg-blue-50 px-5 py-3 text-sm font-semibold text-blue-700 shadow-sm">
+    Google Calendar
+  </div>
+
+  <div class="rounded-2xl border border-amber-200 bg-amber-50 px-5 py-3 text-sm font-semibold text-amber-700 shadow-sm">
+    Airtable
+  </div>
 </div>
-</div>
-<div class="relative">
-<div class="absolute -inset-10 bg-primary/5 rounded-full blur-3xl -z-10"></div>
-<img alt="Dashboard de Aidely enfocado en Leo" class="rounded-2xl shadow-2xl border border-white w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4FFBwOAbkrHF-JkNY3w6yHsyAvqe7FRuqbPj87nkE4gr7fDZyL23cTR17IO9xsVD5-JxDfQHrxz9f6iNuKf8b65u1oBDOidSNlBM08XwjUY1bp-qaGN493mhxIIJTDkFmJZIALMgs4Uqj7ua9C04B0E7qtgfERBP8uDNO8yGluEHWuX3ptgbqBqci88NnhjsIITM-SAnRQ8ER02l78LoAve5BQMV5v4GDXJW5zvojALiMOLaWYA8aPK7xRDqCTIwFTNvF4UHzVChC"/>
-</div>
-</div>
+    </div>
+
+  </div>
 </header>
 <!-- 3. Problems Section -->
 <section class="py-24 bg-white">
