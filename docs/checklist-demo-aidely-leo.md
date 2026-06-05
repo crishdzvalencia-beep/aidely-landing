@@ -1,143 +1,99 @@
-# Checklist demo - Aidely + Leo
+# Checklist demo — Aidely + Leo
 
-## 1. Preparar entorno de trabajo
+## Objetivo del checklist
 
-* [ ] Abrir VS Code en la carpeta correcta:
+Este checklist sirve para preparar, validar y presentar Aidely como una demo funcional de empleados digitales sencillos para autónomos y pequeños negocios.
 
-```bash
-C:\Users\zaphi\Documents\proyectos-aidely\landing-aidely
-```
+Aidely no debe presentarse como una plataforma corporativa compleja ni como un sistema autónomo que toma decisiones irreversibles.
 
-* [ ] Comprobar estado de Git:
+Aidely debe presentarse como una ayuda digital práctica que:
 
-```bash
-git status
-```
-
-* [ ] Confirmar que no hay cambios pendientes antes de empezar una prueba importante.
-* [ ] Abrir n8n local.
-* [ ] Abrir Airtable.
-* [ ] Abrir Telegram.
-* [ ] Abrir Gmail.
-* [ ] Abrir la landing pública de Vercel o la landing local con Live Server.
+* ordena solicitudes,
+* avisa oportunidades,
+* prepara borradores,
+* recuerda seguimientos,
+* genera reportes,
+* demuestra empleados digitales sencillos,
+* mantiene siempre revisión humana.
 
 ---
 
-## 2. Arrancar n8n local
+## 1. Enfoque estratégico actual
 
-* [ ] Abrir PowerShell.
-* [ ] Ejecutar n8n si no está activo:
-
-```bash
-n8n
-```
-
-* [ ] Confirmar que n8n abre correctamente en:
-
-```text
-http://localhost:5678
-```
+* [ ] Aidely se presenta como empleados digitales sencillos para autónomos y pequeños negocios.
+* [ ] El mensaje evita lenguaje técnico innecesario.
+* [ ] No se habla de n8n, webhooks, APIs o Gemini delante del cliente salvo que pregunte.
+* [ ] Se explica que Aidely prepara, ordena y avisa.
+* [ ] Se explica que el dueño revisa y decide.
+* [ ] Se evita prometer automatización total.
+* [ ] Se evita prometer producción empresarial 24/7 en fase inicial.
+* [ ] Se evita trabajar con datos sensibles al inicio.
+* [ ] Se deja claro que los pilotos se cobran, aunque sean accesibles.
 
 ---
 
-## 3. Arrancar ngrok
+## 2. Preparar modo demo local
 
-* [ ] Abrir una segunda terminal.
-* [ ] Ejecutar:
+* [ ] VS Code abierto en el proyecto `landing-aidely`.
+* [ ] n8n local abierto.
+* [ ] ngrok activo solo para demo o prueba controlada.
+* [ ] WF1 publicado / activo.
+* [ ] WF2 publicado / activo.
+* [ ] WF3 publicado / activo.
+* [ ] WF4 publicado / activo.
+* [ ] WF5 publicado / activo.
+* [ ] No pulsar “Listen for test event” si se está usando producción local.
+* [ ] URL del HTML usando `/webhook/leo-leads`.
+* [ ] Landing abierta en navegador.
+* [ ] Telegram abierto para verificar avisos.
+* [ ] Gmail abierto para verificar borradores.
+* [ ] Airtable abierto para revisar registros.
+
+---
+
+## 3. Arrancar ngrok para demo local
 
 ```bash
 ngrok http 5678
 ```
 
-* [ ] Copiar la nueva URL HTTPS de ngrok.
-* [ ] Confirmar que la URL está activa.
-
-Ejemplo:
-
-```text
-https://TU-URL.ngrok-free.dev
-```
-
 ---
 
-## 4. Revisar URL del webhook en HTML
+## 4. Revisar URL en HTML
 
-* [ ] Abrir `index.html`.
-* [ ] Buscar:
-
-```javascript
-const WEBHOOK_URL
-```
-
-* [ ] Confirmar que apunta a:
+En `index.html`, comprobar:
 
 ```javascript
 const WEBHOOK_URL = "https://TU-URL.ngrok-free.dev/webhook/leo-leads";
 ```
 
-* [ ] Confirmar que usa `/webhook/leo-leads`.
-* [ ] Confirmar que NO usa `/webhook-test/leo-leads`.
-
-Si cambia la URL de ngrok:
-
-* [ ] Actualizar `WEBHOOK_URL`.
-* [ ] Guardar archivo.
-* [ ] Probar en local.
-* [ ] Hacer commit.
-* [ ] Hacer push.
-
-```bash
-git add index.html
-git commit -m "Actualizar URL webhook Aidely"
-git push
-```
-
----
-
-## 5. Estado de workflows antes de la demo
-
-Confirmar en n8n:
-
-* [ ] WF1 — Publicado / Publish.
-* [ ] WF2 — Publicado / Publish.
-* [ ] WF3 — Publicado / Publish.
-* [ ] WF4 — Publicado / Publish.
-* [ ] WF5 — Publicado / Publish.
-
-Estado esperado:
+Recordatorio:
 
 ```text
-WF1 activo
-WF2 activo
-WF3 activo
-WF4 activo
-WF5 activo
+/webhook/leo-leads = producción local controlada.
+/webhook-test/leo-leads = solo pruebas internas con Listen for test event.
 ```
 
 ---
 
-## 6. Frecuencias recomendadas
+## 5. Probar landing publicada en Vercel
 
-Revisar triggers:
-
-* [ ] WF1 — Webhook inmediato.
-* [ ] WF2 — Cada 5 minutos.
-* [ ] WF3 — Cada 10 minutos.
-* [ ] WF4 — Cada 15-30 minutos.
-* [ ] WF5 — Diario, recomendado a las 20:00.
-
-Notas:
-
-* WF2 debe actuar antes que WF3.
-* WF3 debe crear borrador después de que WF2 haya marcado `Aviso enviado = si`.
-* WF4 debe actuar después de que WF3 haya marcado `Respuesta preparada = si`.
-* WF5 debe resumir el día completo, por eso se recomienda horario de cierre.
+* [ ] Abrir landing pública.
+* [ ] Revisar que carga correctamente.
+* [ ] Revisar menú superior.
+* [ ] Revisar sección de Leo.
+* [ ] Revisar sección de empleados digitales.
+* [ ] Revisar precios.
+* [ ] Revisar Demo Vera.
+* [ ] Revisar formulario de diagnóstico.
+* [ ] Confirmar que no hay errores visuales importantes.
+* [ ] Confirmar que el mensaje es claro para autónomos y pequeños negocios.
 
 ---
 
-## 7. Probar lead desde la landing
+## 6. Probar lead desde la landing
 
-* [ ] Ir al formulario de diagnóstico.
+* [ ] Ir al formulario.
 * [ ] Rellenar nombre.
 * [ ] Rellenar email.
 * [ ] Rellenar teléfono.
@@ -147,75 +103,82 @@ Notas:
 * [ ] Seleccionar presupuesto.
 * [ ] Escribir mensaje.
 * [ ] Enviar diagnóstico.
-
-Ejemplo de lead CALIENTE para prueba:
-
-```text
-Nombre: Laura Prueba Final
-Empresa: Clínica Horizonte
-Email: laura.pruebafinal@aidelytest.com
-Teléfono: 600555444
-Sector: Clínica
-Urgencia: Alta
-Presupuesto: 500-800€
-
-Mensaje:
-Hola, tenemos una clínica y necesitamos automatizar cuanto antes las solicitudes de nuevos pacientes. Recibimos consultas por la web y por WhatsApp, pero tardamos en responder y estamos perdiendo oportunidades. Queremos avisos rápidos, clasificación de contactos y una respuesta preparada para contactar mejor.
-```
+* [ ] Confirmar mensaje visual de envío correcto.
+* [ ] Confirmar que no se rompe el formulario.
+* [ ] Confirmar que no se toca la Demo Vera.
 
 ---
 
-## 8. Validar WF1 — Recepción y clasificación
+## 7. Validar WF1 — Recepción y clasificación
 
-Después de enviar el formulario:
-
-* [ ] WF1 se ejecuta automáticamente.
 * [ ] Webhook recibe datos.
-* [ ] Preparar lead conserva nombre, email, empresa y teléfono.
+* [ ] Preparar lead conserva nombre.
+* [ ] Preparar lead conserva email.
+* [ ] Preparar lead conserva teléfono.
+* [ ] Preparar lead conserva empresa.
 * [ ] Origen = Landing Aidely.
-* [ ] Gemini clasifica.
+* [ ] Gemini clasifica correctamente.
 * [ ] Preparar resultado final Leo genera ruta.
 * [ ] Airtable crea registro.
-
-Campos esperados en Airtable:
-
-* [ ] Nombre correcto.
-* [ ] Empresa correcta.
-* [ ] Email correcto.
-* [ ] Teléfono correcto.
-* [ ] Sector correcto.
-* [ ] Mensaje correcto.
-* [ ] Origen = Landing Aidely.
-* [ ] Clasificación generada.
-* [ ] Ruta Leo generada.
-* [ ] Estado comercial generado.
+* [ ] Lead ID se genera correctamente.
+* [ ] Fecha entrada se guarda correctamente.
+* [ ] Clasificación se guarda correctamente.
+* [ ] Ruta Leo se guarda correctamente.
+* [ ] Estado comercial se guarda correctamente.
+* [ ] Requiere aviso se guarda correctamente.
+* [ ] Requiere borrador se guarda correctamente.
 
 ---
 
-## 9. Validar lead CALIENTE
-
-Para lead caliente:
+## 8. Validar lead CALIENTE
 
 * [ ] Clasificación = CALIENTE.
 * [ ] Ruta Leo = accion_urgente.
 * [ ] Estado comercial = contactar_hoy.
 * [ ] Requiere aviso = si.
 * [ ] Requiere borrador = si.
-* [ ] Aviso enviado = no al crearse.
-* [ ] Respuesta preparada = no al crearse.
-* [ ] Seguimiento pendiente = no al crearse.
-* [ ] Seguimiento enviado = no al crearse.
-
-Luego esperar automatización:
-
+* [ ] Aviso enviado inicial = no.
+* [ ] Respuesta preparada inicial = no.
+* [ ] WF2 encuentra el lead.
 * [ ] WF2 envía Telegram.
-* [ ] WF3 crea borrador Gmail.
-* [ ] WF4 envía recordatorio de seguimiento.
-* [ ] WF5 incluye el lead en reporte diario.
+* [ ] WF2 marca Aviso enviado = si.
+* [ ] WF3 encuentra el lead.
+* [ ] WF3 crea Gmail draft.
+* [ ] WF3 marca Respuesta preparada = si.
+* [ ] WF3 marca Estado respuesta = preparada.
+* [ ] WF3 activa Seguimiento pendiente = si.
+* [ ] WF4 envía recordatorio si corresponde.
+* [ ] WF5 incluye el lead en el reporte diario.
 
 ---
 
-## 10. Validar WF2 — Aviso de lead caliente
+## 9. Validar lead TIBIO
+
+* [ ] Clasificación = TIBIO.
+* [ ] Ruta Leo = seguimiento_suave.
+* [ ] No envía Telegram urgente.
+* [ ] No crea Gmail automático de respuesta urgente.
+* [ ] Queda registrado en Airtable.
+* [ ] Queda preparado para seguimiento suave.
+* [ ] Estado comercial no se confunde con contactar_hoy.
+* [ ] No activa flujo de aviso caliente.
+
+---
+
+## 10. Validar lead FRIO
+
+* [ ] Clasificación = FRIO.
+* [ ] Ruta Leo = nutricion.
+* [ ] Estado respuesta = no_prioritaria.
+* [ ] No envía Telegram urgente.
+* [ ] No crea Gmail automático.
+* [ ] No activa seguimiento inmediato.
+* [ ] Queda guardado en Airtable.
+* [ ] Puede revisarse manualmente si se desea.
+
+---
+
+## 11. Validar WF2 — Avisos Telegram
 
 Filtro esperado:
 
@@ -223,19 +186,24 @@ Filtro esperado:
 AND({Clasificación} = "CALIENTE", {Estado comercial} = "contactar_hoy", {Aviso enviado} = "no")
 ```
 
-Validaciones:
+Checklist:
 
-* [ ] WF2 detecta el lead caliente.
-* [ ] Telegram recibe aviso interno.
-* [ ] El mensaje incluye empresa, nombre, teléfono, email y acción recomendada.
-* [ ] Airtable actualiza `Aviso enviado = si`.
-* [ ] Airtable actualiza `Fecha aviso`.
-* [ ] Ejecutar Search después de procesar devuelve 0 items.
-* [ ] No se duplican avisos.
+* [ ] Search records encuentra leads correctos.
+* [ ] No encuentra leads ya avisados.
+* [ ] Preparar aviso Leo genera mensaje claro.
+* [ ] Telegram recibe aviso.
+* [ ] Mensaje incluye nombre.
+* [ ] Mensaje incluye empresa.
+* [ ] Mensaje incluye teléfono.
+* [ ] Mensaje incluye email.
+* [ ] Mensaje incluye clasificación.
+* [ ] Mensaje incluye próxima acción.
+* [ ] Update record marca Aviso enviado = si.
+* [ ] No duplica avisos.
 
 ---
 
-## 11. Validar WF3 — Borrador Gmail
+## 12. Validar WF3 — Borradores Gmail
 
 Filtro esperado:
 
@@ -243,48 +211,44 @@ Filtro esperado:
 AND({Clasificación} = "CALIENTE", {Estado comercial} = "contactar_hoy", {Aviso enviado} = "si", {Respuesta preparada} = "no")
 ```
 
-Validaciones:
+Checklist:
 
-* [ ] WF3 detecta leads calientes ya avisados.
-* [ ] Preparar email Leo genera email limpio.
-* [ ] El email NO incluye notas internas.
-* [ ] El email NO incluye “Motivo IA”.
-* [ ] El email NO incluye “Resumen de tu caso”.
-* [ ] El email NO incluye “Próximo paso recomendado”.
+* [ ] Search records encuentra leads correctos.
+* [ ] Preparar email Leo genera asunto claro.
+* [ ] Preparar email Leo genera cuerpo comercial limpio.
+* [ ] El cuerpo no copia texto interno como “motivo IA” de forma cruda.
+* [ ] El cuerpo habla al cliente de forma natural.
 * [ ] Gmail crea borrador.
-* [ ] Gmail NO envía email automáticamente.
-* [ ] Airtable actualiza `Respuesta preparada = si`.
-* [ ] Airtable actualiza `Estado respuesta = preparada`.
-* [ ] Airtable actualiza `Seguimiento pendiente = si`.
-* [ ] Airtable mantiene `Seguimiento enviado = no`.
-* [ ] Ejecutar Search después de procesar devuelve 0 items.
-* [ ] No se duplican borradores.
+* [ ] Gmail no envía correo automáticamente.
+* [ ] Update record marca Respuesta preparada = si.
+* [ ] Update record marca Estado respuesta = preparada.
+* [ ] Update record activa Seguimiento pendiente = si.
+* [ ] No duplica borradores.
 
 ---
 
-## 12. Validar WF4 — Seguimiento comercial
+## 13. Validar WF4 — Seguimientos
 
 Filtro esperado:
 
 ```text
-AND({Respuesta preparada} = "si", {Seguimiento pendiente} = "si", {Seguimiento enviado} = "no")
+AND({Seguimiento pendiente} = "si", {Seguimiento enviado} = "no")
 ```
 
-Validaciones:
+Checklist:
 
-* [ ] WF4 detecta leads con respuesta preparada y seguimiento pendiente.
-* [ ] Preparar seguimiento Leo genera mensaje interno.
-* [ ] Telegram recibe recordatorio de seguimiento.
-* [ ] El mensaje muestra `contactar hoy`, no `contactarhoy`.
-* [ ] Airtable actualiza `Seguimiento enviado = si`.
-* [ ] Airtable actualiza `Fecha seguimiento`.
-* [ ] Airtable actualiza `Fecha próximo seguimiento` si aplica.
-* [ ] Ejecutar Search después de procesar devuelve 0 items.
-* [ ] No se duplican seguimientos.
+* [ ] Search records encuentra seguimientos pendientes.
+* [ ] Preparar seguimiento Leo genera mensaje claro.
+* [ ] Telegram recibe recordatorio.
+* [ ] Mensaje no muestra estados deformados.
+* [ ] Mensaje incluye acción sugerida.
+* [ ] Update record marca Seguimiento enviado = si.
+* [ ] No duplica seguimientos.
+* [ ] El seguimiento sigue siendo interno, no se envía al cliente.
 
 ---
 
-## 13. Validar WF5 — Reporte diario
+## 14. Validar WF5 — Reporte diario
 
 Filtro esperado:
 
@@ -292,256 +256,250 @@ Filtro esperado:
 IS_SAME({Fecha entrada}, TODAY(), 'day')
 ```
 
-Validaciones:
+Checklist:
 
-* [ ] WF5 busca leads del día.
-* [ ] Crear reporte Leo genera 1 solo item.
-* [ ] Telegram recibe 1 solo reporte.
-* [ ] El reporte incluye leads revisados hoy.
-* [ ] El reporte incluye calientes, tibios, fríos y revisar.
-* [ ] El reporte incluye avisos enviados.
-* [ ] El reporte incluye borradores preparados.
-* [ ] El reporte incluye seguimientos enviados.
-* [ ] El reporte incluye seguimientos pendientes sin avisar.
-* [ ] El reporte no se contradice.
-* [ ] Si no hay score válido, muestra `Score medio: No disponible`.
-* [ ] No aparece mensaje automático de n8n.
+* [ ] Ejecutar reporte.
+* [ ] Search records encuentra leads del día.
+* [ ] Crear reporte Leo cuenta total de leads.
+* [ ] Cuenta calientes.
+* [ ] Cuenta tibios.
+* [ ] Cuenta fríos.
+* [ ] Cuenta revisar.
+* [ ] Cuenta avisos enviados.
+* [ ] Cuenta borradores preparados.
+* [ ] Cuenta seguimientos enviados.
+* [ ] Diferencia seguimientos pendientes sin enviar.
+* [ ] Telegram recibe reporte.
+* [ ] Reporte se entiende fácil.
+* [ ] No aparece mensaje automático innecesario de n8n si se puede evitar.
 
-Ejemplo esperado:
+---
+
+## 15. Validar Demo Vera
+
+* [ ] Enlace Demo aparece en el menú.
+* [ ] Al pulsar Demo baja a la sección Vera.
+* [ ] La sección se ve bien en escritorio.
+* [ ] La tabla de stock ficticio se ve clara.
+* [ ] El botón “Probar a Vera” funciona.
+* [ ] Aparece reporte generado.
+* [ ] Aparece borrador simulado.
+* [ ] No conecta con datos reales.
+* [ ] No toca Airtable.
+* [ ] No toca n8n.
+* [ ] No toca Gmail real.
+* [ ] No toca Telegram.
+* [ ] No interfiere con el formulario.
+* [ ] Se explica como lista simple de reposición, no inventario exacto.
+
+---
+
+## 16. Validar mensaje comercial
+
+Durante la demo, comprobar que se comunica:
+
+* [ ] Aidely ayuda a pequeños negocios.
+* [ ] Aidely no es una plataforma corporativa compleja.
+* [ ] Leo ya funciona como empleado de atención y ventas.
+* [ ] Vera es una demo visual con datos ficticios.
+* [ ] Hugo será el próximo empleado enfocado en presupuestos rápidos.
+* [ ] Aidely trabaja con datos mínimos.
+* [ ] Aidely prepara borradores y avisos.
+* [ ] El dueño mantiene el control.
+* [ ] No se prometen acciones automáticas peligrosas.
+* [ ] Los pilotos se cobran de forma accesible.
+
+---
+
+## 17. Qué decir sobre ChatGPT Agents
+
+* [ ] Explicar que ChatGPT puede crear agentes y ayudar mucho.
+* [ ] No decir que Aidely es mejor que ChatGPT.
+* [ ] Decir que Aidely convierte esas posibilidades en procesos concretos para pequeños negocios.
+* [ ] Decir que el cliente no necesita aprender prompts, APIs, n8n, Make ni conectores.
+* [ ] Usar la frase:
 
 ```text
-📊 Reporte de Leo — Aidely
-
-📥 Leads revisados hoy: 2
-
-🔥 Calientes: 2
-🌤️ Tibios: 0
-❄️ Fríos: 0
-⚠️ Revisar: 0
-
-📲 Avisos enviados: 2
-✉️ Borradores preparados: 2
-✅ Seguimientos enviados: 2
-⏳ Seguimientos pendientes sin avisar: 0
-
-⭐ Score medio: No disponible
-
-🧠 Estado general:
-Leo ha procesado oportunidades importantes y no quedan seguimientos pendientes sin avisar.
+ChatGPT te da la herramienta.
+Aidely te deja el proceso funcionando.
 ```
 
 ---
 
-## 14. Validar lead TIBIO
+## 18. Qué no prometer
 
-Probar con un mensaje menos urgente.
+No decir:
 
-Ejemplo:
+* [ ] “La IA lo hace todo.”
+* [ ] “Esto funciona para cualquier empresa automáticamente.”
+* [ ] “Conectamos cualquier sistema sin problema.”
+* [ ] “No hace falta revisar nada.”
+* [ ] “Enviamos presupuestos automáticamente.”
+* [ ] “Gestionamos facturas reales desde el primer día.”
+* [ ] “Controlamos stock exacto.”
+* [ ] “Cumplimos todo legalmente sin revisar el caso.”
 
-```text
-Hola, estoy valorando mejorar la organización de los clientes de mi negocio, pero no es urgente. Me gustaría recibir información y quizá probar algo más adelante.
-```
-
-Validaciones:
-
-* [ ] Clasificación = TIBIO.
-* [ ] Ruta Leo = seguimiento_suave.
-* [ ] Estado comercial = hacer_seguimiento.
-* [ ] No Telegram urgente por WF2.
-* [ ] No Gmail automático inmediato si no corresponde.
-* [ ] Seguimiento suave preparado si aplica.
-* [ ] Airtable guarda el lead correctamente.
-
----
-
-## 15. Validar lead FRIO
-
-Probar con un mensaje poco concreto o sin intención clara.
-
-Ejemplo:
+Mejor decir:
 
 ```text
-Hola, solo estaba mirando la página. No tengo negocio todavía, pero quería saber de qué va esto.
+Aidely prepara, ordena y avisa.
+Tú revisas y decides.
 ```
 
-Validaciones:
+---
 
-* [ ] Clasificación = FRIO.
-* [ ] Ruta Leo = nutricion.
-* [ ] Estado respuesta = no_prioritaria.
-* [ ] No Telegram urgente.
-* [ ] No Gmail.
-* [ ] No seguimiento inmediato.
-* [ ] Airtable guarda el lead correctamente.
+## 19. Primeros pilotos
+
+Antes de ofrecer piloto:
+
+* [ ] Tener claro el alcance.
+* [ ] Tener claro qué datos se usarán.
+* [ ] Evitar datos sensibles.
+* [ ] Evitar ngrok.
+* [ ] Usar n8n Cloud, Make o infraestructura estable.
+* [ ] Separar datos del cliente.
+* [ ] Explicar que las acciones serán revisables.
+* [ ] Cobrar siempre algo por el piloto.
+* [ ] Definir duración del piloto.
+* [ ] Definir qué se considera éxito.
+* [ ] Definir qué no está incluido.
 
 ---
 
-## 16. Validar que no hay duplicados
+## 20. Pricing inicial orientativo
 
-Después de una prueba completa:
-
-* [ ] Search de WF2 devuelve 0.
-* [ ] Search de WF3 devuelve 0.
-* [ ] Search de WF4 devuelve 0.
-* [ ] No se repite Telegram de lead caliente.
-* [ ] No se crea segundo borrador Gmail.
-* [ ] No se repite recordatorio de seguimiento.
-
----
-
-## 17. Validar Gmail
-
-* [ ] Gmail conectado correctamente.
-* [ ] No hay error de token.
-* [ ] Se crean borradores.
-* [ ] No se envían emails automáticamente.
-* [ ] El texto del borrador es cliente-facing.
-* [ ] El texto no contiene notas internas.
-* [ ] El asunto es correcto.
-* [ ] El destinatario es correcto.
-* [ ] El cuerpo del email es claro y profesional.
-
-Si hay error de token:
-
-* [ ] Abrir credencial Gmail.
-* [ ] Reconectar cuenta.
-* [ ] Guardar.
-* [ ] Reintentar nodo Gmail.
+* [ ] Diagnóstico inicial gratuito o simbólico.
+* [ ] Piloto de 30 días desde 49€.
+* [ ] Instalación básica 99€ - 149€.
+* [ ] Mensualidad por empleado sencillo 49€ - 79€/mes.
+* [ ] Pack de 2 empleados 99€ - 129€/mes.
+* [ ] No regalar instalaciones completas.
+* [ ] No aceptar clientes que pidan todo por muy poco.
+* [ ] Mantener precios accesibles.
 
 ---
 
-## 18. Validar Telegram
+## 21. Checklist Git
 
-* [ ] Telegram recibe aviso de WF2.
-* [ ] Telegram recibe seguimiento de WF4.
-* [ ] Telegram recibe reporte de WF5.
-* [ ] No aparece atribución automática de n8n.
-* [ ] No se pierde formato por guiones bajos.
-* [ ] Los mensajes son internos, claros y accionables.
-
-Si aparece texto automático de n8n:
-
-* [ ] Revisar opción `Append n8n Attribution`.
-* [ ] Desactivarla.
-
----
-
-## 19. Validar Airtable
-
-Revisar que los campos cambian en orden:
-
-### Al entrar por WF1
-
-* [ ] Aviso enviado = no.
-* [ ] Respuesta preparada = no.
-* [ ] Seguimiento pendiente = no.
-* [ ] Seguimiento enviado = no.
-
-### Después de WF2
-
-* [ ] Aviso enviado = si.
-* [ ] Fecha aviso rellena.
-
-### Después de WF3
-
-* [ ] Respuesta preparada = si.
-* [ ] Estado respuesta = preparada.
-* [ ] Seguimiento pendiente = si.
-* [ ] Fecha respuesta preparada rellena.
-* [ ] Asunto email relleno.
-
-### Después de WF4
-
-* [ ] Seguimiento enviado = si.
-* [ ] Fecha seguimiento rellena.
-* [ ] Fecha próximo seguimiento rellena si aplica.
-
----
-
-## 20. Validar prueba general completa
-
-Flujo esperado:
-
-```text
-Landing pública
-↓
-WF1 recibe y clasifica
-↓
-Airtable guarda el lead
-↓
-WF2 avisa por Telegram
-↓
-WF3 crea borrador Gmail
-↓
-WF4 avisa seguimiento pendiente
-↓
-WF5 genera reporte diario
-```
-
-Checklist final:
-
-* [ ] Landing envía lead.
-* [ ] Airtable recibe lead.
-* [ ] WF1 clasifica.
-* [ ] WF2 avisa.
-* [ ] WF3 crea borrador.
-* [ ] WF4 recuerda seguimiento.
-* [ ] WF5 reporta.
-* [ ] No hay duplicados.
-* [ ] No hay errores de credenciales.
-* [ ] No se toca manualmente ningún nodo durante la prueba automática.
-
----
-
-## 21. Próxima demo estratégica — Vera
-
-Pendiente de construir:
-
-```text
-Demo Vera — control de stock y pedidos
-```
-
-Objetivo:
-
-* [ ] Crear sección demo en la landing.
-* [ ] Usar datos ficticios de una tienda.
-* [ ] Mostrar tabla de stock.
-* [ ] Añadir botón “Probar a Vera”.
-* [ ] Simular revisión de stock.
-* [ ] Detectar productos bajo mínimo.
-* [ ] Mostrar pedido sugerido.
-* [ ] Mostrar reporte generado.
-* [ ] Mostrar borrador de pedido.
-* [ ] Añadir CTA “Quiero una demo adaptada a mi negocio”.
-
-Reglas:
-
-* [ ] No tocar webhook real.
-* [ ] No tocar formulario real.
-* [ ] No tocar WF1-WF5.
-* [ ] No tocar Airtable real.
-* [ ] No tocar Gmail real.
-* [ ] No tocar Telegram real.
-* [ ] La demo debe funcionar solo en la landing con datos ficticios.
-
----
-
-## 22. Cierre de demo
-
-Antes de cerrar una jornada:
-
-* [ ] Revisar `git status`.
-* [ ] Guardar cambios en VS Code.
-* [ ] Hacer commit si hubo cambios documentales o de código.
-* [ ] Hacer push.
-* [ ] Confirmar Vercel si se tocó `index.html`.
-* [ ] Confirmar que README y checklist están actualizados.
-
-Comandos:
+Antes de cerrar cualquier bloque:
 
 ```bash
 git status
-git add docs/checklist-demo-aidely-leo.md
-git commit -m "Actualiza checklist demo Aidely Leo"
+```
+
+Revisar cambios:
+
+```bash
+git diff --stat
+```
+
+Añadir archivos:
+
+```bash
+git add .
+```
+
+Commit:
+
+```bash
+git commit -m "Mensaje claro del cambio"
+```
+
+Push:
+
+```bash
 git push
 ```
+
+Estado final esperado:
+
+```text
+nothing to commit, working tree clean
+```
+
+---
+
+## 22. Ruta actual de trabajo
+
+### Bloque 1 — Estrategia
+
+* [x] Crear `docs/estrategia-aidely-negocios-pequenos.md`.
+* [x] Revisar contenido.
+* [x] Corregir ubicación si se creó carpeta duplicada.
+* [x] Commit.
+* [x] Push.
+
+---
+
+### Bloque 2 — Documentación
+
+* [x] Actualizar `README-AIDELY-LEO.md`.
+* [ ] Actualizar `checklist-demo-aidely-leo.md`.
+* [ ] Actualizar `Aidely_Leo_MVP_Documentacion_v1.md`.
+* [ ] Regenerar PDF si corresponde.
+* [ ] Actualizar NotebookLM con el nuevo enfoque.
+
+---
+
+### Bloque 3 — Landing
+
+* [ ] Revisar hero principal.
+* [ ] Revisar subtítulo.
+* [ ] Revisar sección de empleados.
+* [ ] Revisar Demo Vera.
+* [ ] Revisar precios.
+* [ ] Revisar formulario.
+* [ ] Revisar guion comercial.
+* [ ] Ajustar texto para autónomos y pequeños negocios.
+
+---
+
+### Bloque 4 — Diseño de Hugo
+
+* [ ] Crear `docs/hugo-presupuestos-rapidos.md`.
+* [ ] Definir objetivo.
+* [ ] Definir cliente ideal.
+* [ ] Definir problema.
+* [ ] Definir datos mínimos.
+* [ ] Definir flujo.
+* [ ] Definir herramientas.
+* [ ] Definir riesgos.
+* [ ] Definir mitigaciones.
+* [ ] Definir versión demo.
+* [ ] Definir versión piloto.
+* [ ] Definir mensajes.
+* [ ] Definir formato de presupuesto.
+* [ ] Definir validación.
+
+---
+
+### Bloque 5 — Demo Hugo
+
+* [ ] Decidir formulario o audio.
+* [ ] Diseñar plantilla de presupuesto.
+* [ ] Crear datos ficticios.
+* [ ] Crear flujo de prueba.
+* [ ] Generar borrador revisable.
+* [ ] Validar que no envía nada automáticamente.
+
+---
+
+### Bloque 6 — Infraestructura para piloto
+
+* [ ] Decidir n8n Cloud, Make o VPS.
+* [ ] Evitar ngrok para cliente real.
+* [ ] Separar datos por cliente.
+* [ ] Definir consentimiento básico.
+* [ ] Crear documento de alcance.
+* [ ] Crear checklist de instalación.
+
+---
+
+### Bloque 7 — Validación comercial
+
+* [ ] Hablar con 3 oficios.
+* [ ] Hablar con 3 peluquerías/estética.
+* [ ] Preguntar por presupuestos, citas, clientes perdidos y tareas repetitivas.
+* [ ] No vender en la primera conversación.
+* [ ] Registrar respuestas.
+* [ ] Elegir primer piloto pagado.

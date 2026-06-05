@@ -1,5 +1,61 @@
 # AIDELY + LEO
 
+## Actualización estratégica — Aidely para autónomos y pequeños negocios
+
+Aidely se reposiciona como una solución de empleados digitales sencillos para autónomos, microempresas y pequeños negocios.
+
+El proyecto no busca empezar como una plataforma corporativa compleja ni como una solución para grandes empresas con sistemas críticos, datos masivos o procesos avanzados. La prioridad actual es ayudar a negocios reales y cercanos que necesitan más orden, más rapidez y menos tareas repetitivas, pero que no tienen tiempo, equipo administrativo ni conocimientos técnicos para montar automatizaciones por su cuenta.
+
+Aidely se enfoca en negocios como peluquerías, centros de estética, fontaneros, electricistas, reformistas, técnicos, taxistas, entrenadores personales, academias pequeñas, freelancers, talleres, comercios de barrio, cafeterías, pequeños restaurantes y autónomos de servicios.
+
+La nueva frase principal del proyecto es:
+
+> Empleados digitales sencillos para autónomos y pequeños negocios.
+
+Aidely no vende tecnología por vender tecnología. Aidely vende ayuda práctica instalada, configurada y mantenida para resolver problemas concretos del día a día.
+
+---
+
+## Principio principal
+
+La regla principal de Aidely es:
+
+> Aidely prepara, ordena y avisa.  
+> El dueño revisa y decide.
+
+Esto significa que, en la fase inicial, Aidely no debe ejecutar acciones irreversibles ni tomar decisiones finales por el cliente.
+
+Aidely puede preparar borradores, avisos internos, reportes, presupuestos preliminares, recordatorios y listas simples de revisión.
+
+Aidely no debe enviar presupuestos automáticamente, borrar datos, realizar compras, procesar datos sensibles, gestionar facturación fiscal compleja ni prometer autonomía total sin supervisión.
+
+---
+
+## Estado actual tras la actualización estratégica
+
+El proyecto mantiene a Leo como primer empleado digital funcional validado.
+
+Leo ya funciona de extremo a extremo:
+
+```text
+Landing pública
+↓
+Formulario de diagnóstico
+↓
+Webhook n8n
+↓
+WF1 recibe y clasifica leads
+↓
+Airtable guarda el lead
+↓
+WF2 avisa leads calientes por Telegram
+↓
+WF3 crea borradores Gmail revisables
+↓
+WF4 recuerda seguimientos pendientes
+↓
+WF5 genera reporte diario comercial
+
 ## Documentación del MVP funcional v2
 
 ---
