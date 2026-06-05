@@ -550,3 +550,20 @@ El humano decide.
 * [ ] Separar datos por cliente.
 * [ ] Definir alcance.
 * [ ] Lanzar piloto pagado.
+## 24. Validación inicial de demo Hugo
+
+Estado: validado en entorno local de n8n.
+
+Workflow:
+
+```text
+Disparador manual
+↓
+Solicitud demo Hugo
+↓
+Analizar solicitud Hugo
+↓
+Preparar presupuesto Hugo
+├── Crear borrador Gmail Hugo
+├── Telegram Hugo Aidely
+└── Create a record Airtable
