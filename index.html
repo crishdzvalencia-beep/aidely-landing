@@ -64,7 +64,7 @@
 <a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm" href="#como-funciona">Cómo funciona</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm" href="#precios">Precios</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm" href="#casos">Casos de uso</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm" href="#demo-vera">Demo</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm" href="#demo-hugo">Demos</a>
 </div>
 <a href="#diagnostico" class="bg-primary text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-700 transition-all shadow-lg shadow-blue-200">
   Solicitar diagnóstico
@@ -998,6 +998,106 @@ Pensado para autónomos, negocios de barrio y pequeñas empresas que necesitan a
 </div>
 </div>
 </section>
+<!-- Demo Hugo Section -->
+<section id="demo-hugo" class="py-20 bg-slate-50 scroll-mt-24">
+  <div class="max-w-7xl mx-auto px-8">
+
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="inline-flex items-center rounded-full bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700 border border-amber-100">
+        Demo interactiva
+      </span>
+
+      <h2 class="mt-6 font-headline text-4xl font-extrabold text-slate-900 leading-tight">
+        Prueba cómo trabaja Hugo, tu empleado digital de presupuestos rápidos
+      </h2>
+
+      <p class="mt-5 text-lg text-slate-600 leading-relaxed">
+        Escribe una solicitud como si fuera una nota de voz transcrita. Hugo la ordena, prepara un borrador de presupuesto
+        y te muestra qué datos faltan antes de enviarlo al cliente.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+
+      <!-- Entrada demo Hugo -->
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div class="flex items-center justify-between gap-4 mb-6">
+          <div>
+            <p class="text-sm font-semibold text-amber-700">Solicitud de ejemplo</p>
+            <h3 class="font-headline text-2xl font-bold text-slate-900">
+              Presupuesto desde texto o audio transcrito
+            </h3>
+          </div>
+
+          <div class="h-12 w-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xl">
+            H
+          </div>
+        </div>
+
+        <label for="hugo-demo-input" class="block text-sm font-bold text-slate-700 mb-3">
+          Solicitud del cliente
+        </label>
+
+        <textarea id="hugo-demo-input" rows="8" class="w-full rounded-2xl border-slate-200 bg-slate-50 p-4 text-sm text-slate-700 focus:border-amber-500 focus:ring-amber-500" placeholder="Ejemplo: Hola, soy Marta. Tengo un grifo en la cocina que pierde agua desde hace unos días...">Hola, soy Marta. Tengo un grifo en la cocina que pierde agua desde hace unos días. Quiero cambiarlo por uno nuevo normal, nada especial. Vivo en Valencia y me gustaría saber cuánto me puede costar. No es urgente para hoy, pero sí me gustaría hacerlo esta semana si se puede.</textarea>
+
+        <button id="hugo-demo-button" type="button" class="mt-6 w-full rounded-2xl bg-amber-500 px-6 py-4 font-bold text-white shadow-lg shadow-amber-200 hover:bg-amber-600 transition-all">
+          Probar a Hugo
+        </button>
+
+        <p class="mt-4 text-xs text-slate-500 text-center">
+          Demo simulada. No se envía información a n8n, Gmail, Telegram ni sistemas externos.
+        </p>
+      </div>
+
+      <!-- Resultado demo Hugo -->
+      <div class="space-y-6">
+
+        <div id="hugo-status" class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-sm font-semibold text-slate-500">Estado de Hugo</p>
+          <div class="mt-3 flex items-center gap-3">
+            <span class="h-3 w-3 rounded-full bg-slate-300"></span>
+            <p class="font-semibold text-slate-900">Esperando solicitud</p>
+          </div>
+          <p class="mt-3 text-sm text-slate-500">
+            Pulsa “Probar a Hugo” para simular cómo prepara un presupuesto revisable.
+          </p>
+        </div>
+
+        <div id="hugo-draft" class="hidden rounded-3xl border border-amber-100 bg-amber-50 p-6 shadow-sm">
+          <p class="text-sm font-bold uppercase tracking-wide text-amber-700 mb-3">
+            Borrador de presupuesto preparado
+          </p>
+          <div id="hugo-draft-content" class="text-sm text-slate-700 leading-relaxed whitespace-pre-line"></div>
+        </div>
+
+        <div id="hugo-internal" class="hidden rounded-3xl border border-slate-200 bg-slate-900 p-6 text-white shadow-sm">
+          <p class="text-sm font-bold uppercase tracking-wide text-amber-200 mb-3">
+            Aviso interno para el profesional
+          </p>
+          <div id="hugo-internal-content" class="text-sm text-slate-200 leading-relaxed whitespace-pre-line"></div>
+        </div>
+
+        <div class="rounded-3xl border border-slate-200 bg-white p-6">
+          <h3 class="font-bold text-xl text-slate-900">
+            ¿Qué demuestra esta demo?
+          </h3>
+          <ul class="mt-4 space-y-3 text-sm text-slate-600">
+            <li>✓ Hugo ordena una solicitud desordenada.</li>
+            <li>✓ Prepara un borrador revisable.</li>
+            <li>✓ No envía nada automáticamente.</li>
+            <li>✓ Pide datos faltantes antes de cerrar precio.</li>
+            <li>✓ El profesional mantiene siempre el control.</li>
+          </ul>
+
+          <a href="#diagnostico" class="mt-6 block rounded-2xl bg-primary px-5 py-4 text-center font-bold text-white hover:bg-blue-700 transition-all">
+            Quiero una demo adaptada a mi negocio
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 <!-- Demo Vera Section -->
 <section id="demo-vera" class="py-20 bg-white scroll-mt-24">
   <div class="max-w-7xl mx-auto px-8">
@@ -1492,6 +1592,104 @@ Pensado para autónomos, negocios de barrio y pequeñas empresas que necesitan a
     button.addEventListener('mouseup', () => button.classList.remove('scale-95'));
     button.addEventListener('mouseleave', () => button.classList.remove('scale-95'));
   });
+    // Demo Hugo — presupuestos rápidos
+  const hugoDemoButton = document.getElementById('hugo-demo-button');
+  const hugoDemoInput = document.getElementById('hugo-demo-input');
+  const hugoStatus = document.getElementById('hugo-status');
+  const hugoDraft = document.getElementById('hugo-draft');
+  const hugoDraftContent = document.getElementById('hugo-draft-content');
+  const hugoInternal = document.getElementById('hugo-internal');
+  const hugoInternalContent = document.getElementById('hugo-internal-content');
+
+  function runHugoDemo() {
+    const solicitud = hugoDemoInput?.value?.trim() || '';
+
+    if (!hugoStatus || !hugoDraft || !hugoDraftContent || !hugoInternal || !hugoInternalContent) {
+      return;
+    }
+
+    if (!solicitud) {
+      hugoStatus.innerHTML = `
+        <p class="text-sm font-semibold text-slate-500">Estado de Hugo</p>
+        <div class="mt-3 flex items-center gap-3">
+          <span class="h-3 w-3 rounded-full bg-red-500"></span>
+          <p class="font-semibold text-slate-900">Falta la solicitud</p>
+        </div>
+        <p class="mt-3 text-sm text-slate-500">
+          Escribe una solicitud para que Hugo pueda preparar la demo.
+        </p>
+      `;
+      return;
+    }
+
+    hugoStatus.innerHTML = `
+      <p class="text-sm font-semibold text-slate-500">Estado de Hugo</p>
+      <div class="mt-3 flex items-center gap-3">
+        <span class="h-3 w-3 rounded-full bg-emerald-500"></span>
+        <p class="font-semibold text-slate-900">Borrador preparado</p>
+      </div>
+      <p class="mt-3 text-sm text-slate-500">
+        Hugo ha ordenado la solicitud y ha preparado un presupuesto revisable.
+      </p>
+    `;
+
+    const borrador = `Hola Marta,
+
+Gracias por escribirnos.
+
+Por lo que nos comentas, el trabajo sería:
+
+Sustitución de grifo de cocina estándar que pierde agua. La clienta quiere hacerlo esta semana.
+
+De forma orientativa, el presupuesto queda pendiente de revisión según el tipo de trabajo, materiales necesarios y desplazamiento.
+
+Antes de confirmar el precio final, habría que revisar:
+
+Tipo exacto de grifo, acceso al área de trabajo y fotos de la zona afectada.
+
+El presupuesto final queda pendiente de revisión por el profesional.
+
+Un saludo,
+
+Fontanería Demo Valencia`;
+
+    const avisoInterno = `🧾 Hugo ha preparado un borrador de presupuesto
+
+👤 Cliente: Marta López
+📞 Teléfono: 600123456
+📧 Email: marta.demo@email.com
+
+🛠️ Trabajo: Cambiar grifo de cocina por fuga
+📍 Zona: Valencia
+⚠️ Urgencia: media
+
+💶 Precio:
+Pendiente de revisión según materiales, desplazamiento y trabajo final
+
+📌 Resumen:
+Marta necesita cambiar un grifo de cocina con fuga. Quiere hacerlo esta semana.
+
+✅ Acción recomendada:
+Pide fotos del grifo actual, confirma disponibilidad esta semana y revisa materiales antes de enviar el presupuesto.
+
+🆔 HUGO-DEMO`;
+
+    hugoDraftContent.textContent = borrador;
+    hugoInternalContent.textContent = avisoInterno;
+
+    hugoDraft.classList.remove('hidden');
+    hugoInternal.classList.remove('hidden');
+
+    if (hugoDemoButton) {
+      hugoDemoButton.textContent = 'Hugo ha preparado el borrador';
+      hugoDemoButton.classList.remove('bg-amber-500', 'hover:bg-amber-600');
+      hugoDemoButton.classList.add('bg-emerald-600', 'hover:bg-emerald-700');
+    }
+  }
+
+  if (hugoDemoButton) {
+    hugoDemoButton.addEventListener('click', runHugoDemo);
+  }
   // Demo Vera — control de stock y pedidos
   const veraDemoButton = document.getElementById('vera-demo-button');
   const veraStatus = document.getElementById('vera-status');
