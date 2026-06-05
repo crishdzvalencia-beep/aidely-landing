@@ -1,26 +1,53 @@
-# Checklist demo — Aidely + Leo
+# Checklist demo — Aidely
 
 ## Objetivo del checklist
 
-Este checklist sirve para preparar, validar y presentar Aidely como una demo funcional de empleados digitales sencillos para autónomos y pequeños negocios.
+Este checklist sirve para preparar, validar y presentar Aidely como una solución de empleados digitales sencillos para autónomos, microempresas y pequeños negocios.
 
-Aidely no debe presentarse como una plataforma corporativa compleja ni como un sistema autónomo que toma decisiones irreversibles.
-
-Aidely debe presentarse como una ayuda digital práctica que:
+Aidely debe presentarse como una ayuda práctica que:
 
 * ordena solicitudes,
-* avisa oportunidades,
 * prepara borradores,
-* recuerda seguimientos,
+* avisa oportunidades,
+* recuerda tareas pendientes,
 * genera reportes,
-* demuestra empleados digitales sencillos,
-* mantiene siempre revisión humana.
+* mantiene revisión humana,
+* evita automatizaciones irreversibles.
+
+Regla principal:
+
+```text
+Aidely prepara, ordena y avisa.
+El dueño revisa y decide.
+```
 
 ---
 
-## 1. Enfoque estratégico actual
+## 1. Estado global del proyecto
 
-* [ ] Aidely se presenta como empleados digitales sencillos para autónomos y pequeños negocios.
+* [ ] Leo está validado con WF1-WF5.
+* [ ] Hugo está validado con WF1-WF3.
+* [ ] Vera está validada como demo visual.
+* [ ] La landing está publicada en Vercel.
+* [ ] GitHub está actualizado.
+* [ ] La documentación está actualizada.
+* [ ] No se usan datos reales sensibles.
+* [ ] No se promete automatización total.
+* [ ] No se promete producción estable con ngrok.
+* [ ] Los flujos críticos mantienen revisión humana.
+
+---
+
+## 2. Enfoque estratégico actual
+
+Aidely se presenta como:
+
+```text
+Empleados digitales sencillos para autónomos y pequeños negocios.
+```
+
+Checklist de mensaje:
+
 * [ ] El mensaje evita lenguaje técnico innecesario.
 * [ ] No se habla de n8n, webhooks, APIs o Gemini delante del cliente salvo que pregunte.
 * [ ] Se explica que Aidely prepara, ordena y avisa.
@@ -32,36 +59,196 @@ Aidely debe presentarse como una ayuda digital práctica que:
 
 ---
 
-## 2. Preparar modo demo local
+## 3. Preparar entorno local
 
 * [ ] VS Code abierto en el proyecto `landing-aidely`.
 * [ ] n8n local abierto.
-* [ ] ngrok activo solo para demo o prueba controlada.
+* [ ] Airtable abierto.
+* [ ] Telegram abierto.
+* [ ] Gmail abierto.
+* [ ] Landing abierta en navegador.
+* [ ] Git en carpeta correcta:
+
+```bash
+cd C:\Users\zaphi\Documents\proyectos-aidely\landing-aidely
+```
+
+* [ ] Revisar estado Git:
+
+```bash
+git status
+```
+
+Estado esperado antes de empezar:
+
+```text
+nothing to commit, working tree clean
+```
+
+---
+
+## 4. Landing pública
+
+Archivo principal:
+
+```text
+index.html
+```
+
+Checklist visual:
+
+* [ ] La landing carga correctamente.
+* [ ] El menú superior funciona.
+* [ ] El enlace “Demos” baja a Hugo.
+* [ ] Hero principal comunica autónomos y pequeños negocios.
+* [ ] Leo aparece como empleado de atención y ventas.
+* [ ] Hugo aparece como presupuestos rápidos.
+* [ ] Vera aparece como reposición sencilla.
+* [ ] Precios visibles.
+* [ ] Formulario de diagnóstico visible.
+* [ ] No hay errores visuales importantes.
+* [ ] No hay textos que prometan automatización total.
+* [ ] No hay textos que prometan stock exacto.
+* [ ] No hay textos que prometan envío automático sin revisión.
+
+---
+
+## 5. Demo visual Hugo
+
+La demo visual de Hugo está en la landing y no conecta con sistemas reales.
+
+Funcionamiento:
+
+```text
+Usuario escribe solicitud
+↓
+Pulsa “Probar a Hugo”
+↓
+Aparece borrador simulado
+↓
+Aparece aviso interno simulado
+```
+
+Checklist:
+
+* [ ] La sección Demo Hugo aparece antes que Vera.
+* [ ] El textarea de Hugo aparece correctamente.
+* [ ] El botón “Probar a Hugo” funciona.
+* [ ] Aparece estado “Borrador preparado”.
+* [ ] Aparece borrador de presupuesto simulado.
+* [ ] Aparece aviso interno simulado.
+* [ ] El texto indica que no se envía información a sistemas externos.
+* [ ] No usa webhook.
+* [ ] No usa n8n.
+* [ ] No usa Gemini.
+* [ ] No gasta tokens.
+* [ ] No usa Gmail real.
+* [ ] No usa Telegram real.
+* [ ] No toca Airtable.
+* [ ] No toca datos reales.
+
+---
+
+## 6. Demo visual Vera
+
+La demo visual de Vera está en la landing y no conecta con sistemas reales.
+
+Funcionamiento:
+
+```text
+Usuario pulsa “Probar a Vera”
+↓
+La landing revisa stock ficticio
+↓
+Muestra reporte simulado
+↓
+Muestra lista de reposición simulada
+```
+
+Checklist:
+
+* [ ] La sección Demo Vera sigue funcionando.
+* [ ] El botón “Probar a Vera” funciona.
+* [ ] Aparece reporte generado.
+* [ ] Aparece lista de reposición preparada.
+* [ ] No se habla de stock exacto como promesa real.
+* [ ] Se presenta como reposición sencilla.
+* [ ] No usa webhook.
+* [ ] No usa n8n.
+* [ ] No usa Gemini.
+* [ ] No gasta tokens.
+* [ ] No usa Gmail real.
+* [ ] No usa Telegram real.
+* [ ] No toca Airtable.
+* [ ] No toca datos reales.
+
+---
+
+## 7. Formulario de diagnóstico Aidely
+
+Checklist:
+
+* [ ] El formulario aparece correctamente.
+* [ ] Se puede rellenar nombre.
+* [ ] Se puede rellenar email.
+* [ ] Se puede rellenar teléfono.
+* [ ] Se puede rellenar empresa.
+* [ ] Se puede seleccionar sector.
+* [ ] Se puede seleccionar urgencia.
+* [ ] Se puede seleccionar presupuesto.
+* [ ] Se puede escribir mensaje.
+* [ ] El botón de envío funciona.
+* [ ] El formulario no se rompe tras añadir Hugo.
+* [ ] El formulario no se rompe tras mantener Vera.
+* [ ] La demo Hugo no interfiere con el formulario.
+* [ ] La demo Vera no interfiere con el formulario.
+
+---
+
+# LEO — Validación funcional
+
+## 8. Estado de Leo
+
+Leo es el empleado digital de atención y ventas.
+
+Estado:
+
+```text
+Funcional y validado.
+```
+
+Workflows:
+
+```text
+WF1 — Recepción y clasificación de leads
+WF2 — Avisos Telegram de leads calientes
+WF3 — Borradores Gmail
+WF4 — Seguimientos
+WF5 — Reporte diario comercial
+```
+
+---
+
+## 9. Preparar modo demo local Leo
+
+* [ ] n8n local abierto.
+* [ ] ngrok activo solo si se va a probar el formulario real contra n8n local.
 * [ ] WF1 publicado / activo.
 * [ ] WF2 publicado / activo.
 * [ ] WF3 publicado / activo.
 * [ ] WF4 publicado / activo.
 * [ ] WF5 publicado / activo.
-* [ ] No pulsar “Listen for test event” si se está usando producción local.
+* [ ] No pulsar “Listen for test event” si se usa producción local.
 * [ ] URL del HTML usando `/webhook/leo-leads`.
-* [ ] Landing abierta en navegador.
 * [ ] Telegram abierto para verificar avisos.
 * [ ] Gmail abierto para verificar borradores.
 * [ ] Airtable abierto para revisar registros.
 
 ---
 
-## 3. Arrancar ngrok para demo local
+## 10. URL webhook Leo
 
-```bash
-ngrok http 5678
-```
-
----
-
-## 4. Revisar URL en HTML
-
-En `index.html`, comprobar:
+En `index.html`, revisar:
 
 ```javascript
 const WEBHOOK_URL = "https://TU-URL.ngrok-free.dev/webhook/leo-leads";
@@ -74,42 +261,25 @@ Recordatorio:
 /webhook-test/leo-leads = solo pruebas internas con Listen for test event.
 ```
 
----
-
-## 5. Probar landing publicada en Vercel
-
-* [ ] Abrir landing pública.
-* [ ] Revisar que carga correctamente.
-* [ ] Revisar menú superior.
-* [ ] Revisar sección de Leo.
-* [ ] Revisar sección de empleados digitales.
-* [ ] Revisar precios.
-* [ ] Revisar Demo Vera.
-* [ ] Revisar formulario de diagnóstico.
-* [ ] Confirmar que no hay errores visuales importantes.
-* [ ] Confirmar que el mensaje es claro para autónomos y pequeños negocios.
+No usar ngrok para clientes reales.
 
 ---
 
-## 6. Probar lead desde la landing
+## 11. Probar lead desde landing
 
 * [ ] Ir al formulario.
-* [ ] Rellenar nombre.
-* [ ] Rellenar email.
-* [ ] Rellenar teléfono.
-* [ ] Rellenar empresa.
-* [ ] Seleccionar sector.
-* [ ] Seleccionar urgencia.
-* [ ] Seleccionar presupuesto.
-* [ ] Escribir mensaje.
+* [ ] Rellenar datos.
 * [ ] Enviar diagnóstico.
 * [ ] Confirmar mensaje visual de envío correcto.
-* [ ] Confirmar que no se rompe el formulario.
-* [ ] Confirmar que no se toca la Demo Vera.
+* [ ] Confirmar que n8n recibe el lead.
+* [ ] Confirmar que no se rompe Demo Hugo.
+* [ ] Confirmar que no se rompe Demo Vera.
 
 ---
 
-## 7. Validar WF1 — Recepción y clasificación
+## 12. Leo WF1 — Recepción y clasificación
+
+Checklist:
 
 * [ ] Webhook recibe datos.
 * [ ] Preparar lead conserva nombre.
@@ -130,7 +300,7 @@ Recordatorio:
 
 ---
 
-## 8. Validar lead CALIENTE
+## 13. Validar lead CALIENTE
 
 * [ ] Clasificación = CALIENTE.
 * [ ] Ruta Leo = accion_urgente.
@@ -152,7 +322,7 @@ Recordatorio:
 
 ---
 
-## 9. Validar lead TIBIO
+## 14. Validar lead TIBIO
 
 * [ ] Clasificación = TIBIO.
 * [ ] Ruta Leo = seguimiento_suave.
@@ -165,7 +335,7 @@ Recordatorio:
 
 ---
 
-## 10. Validar lead FRIO
+## 15. Validar lead FRIO
 
 * [ ] Clasificación = FRIO.
 * [ ] Ruta Leo = nutricion.
@@ -178,7 +348,7 @@ Recordatorio:
 
 ---
 
-## 11. Validar WF2 — Avisos Telegram
+## 16. Leo WF2 — Avisos Telegram
 
 Filtro esperado:
 
@@ -203,7 +373,7 @@ Checklist:
 
 ---
 
-## 12. Validar WF3 — Borradores Gmail
+## 17. Leo WF3 — Borradores Gmail
 
 Filtro esperado:
 
@@ -216,8 +386,6 @@ Checklist:
 * [ ] Search records encuentra leads correctos.
 * [ ] Preparar email Leo genera asunto claro.
 * [ ] Preparar email Leo genera cuerpo comercial limpio.
-* [ ] El cuerpo no copia texto interno como “motivo IA” de forma cruda.
-* [ ] El cuerpo habla al cliente de forma natural.
 * [ ] Gmail crea borrador.
 * [ ] Gmail no envía correo automáticamente.
 * [ ] Update record marca Respuesta preparada = si.
@@ -227,7 +395,7 @@ Checklist:
 
 ---
 
-## 13. Validar WF4 — Seguimientos
+## 18. Leo WF4 — Seguimientos
 
 Filtro esperado:
 
@@ -240,7 +408,6 @@ Checklist:
 * [ ] Search records encuentra seguimientos pendientes.
 * [ ] Preparar seguimiento Leo genera mensaje claro.
 * [ ] Telegram recibe recordatorio.
-* [ ] Mensaje no muestra estados deformados.
 * [ ] Mensaje incluye acción sugerida.
 * [ ] Update record marca Seguimiento enviado = si.
 * [ ] No duplica seguimientos.
@@ -248,7 +415,7 @@ Checklist:
 
 ---
 
-## 14. Validar WF5 — Reporte diario
+## 19. Leo WF5 — Reporte diario
 
 Filtro esperado:
 
@@ -271,115 +438,278 @@ Checklist:
 * [ ] Diferencia seguimientos pendientes sin enviar.
 * [ ] Telegram recibe reporte.
 * [ ] Reporte se entiende fácil.
-* [ ] No aparece mensaje automático innecesario de n8n si se puede evitar.
 
 ---
 
-## 15. Validar Demo Vera
+# HUGO — Validación funcional
 
-* [ ] Enlace Demo aparece en el menú.
-* [ ] Al pulsar Demo baja a la sección Vera.
-* [ ] La sección se ve bien en escritorio.
-* [ ] La tabla de stock ficticio se ve clara.
-* [ ] El botón “Probar a Vera” funciona.
-* [ ] Aparece reporte generado.
-* [ ] Aparece borrador simulado.
-* [ ] No conecta con datos reales.
-* [ ] No toca Airtable.
-* [ ] No toca n8n.
-* [ ] No toca Gmail real.
-* [ ] No toca Telegram.
-* [ ] No interfiere con el formulario.
-* [ ] Se explica como lista simple de reposición, no inventario exacto.
+## 20. Estado de Hugo
 
----
+Hugo es el empleado digital de presupuestos rápidos.
 
-## 16. Validar mensaje comercial
-
-Durante la demo, comprobar que se comunica:
-
-* [ ] Aidely ayuda a pequeños negocios.
-* [ ] Aidely no es una plataforma corporativa compleja.
-* [ ] Leo ya funciona como empleado de atención y ventas.
-* [ ] Vera es una demo visual con datos ficticios.
-* [ ] Hugo será el próximo empleado enfocado en presupuestos rápidos.
-* [ ] Aidely trabaja con datos mínimos.
-* [ ] Aidely prepara borradores y avisos.
-* [ ] El dueño mantiene el control.
-* [ ] No se prometen acciones automáticas peligrosas.
-* [ ] Los pilotos se cobran de forma accesible.
-
----
-
-## 17. Qué decir sobre ChatGPT Agents
-
-* [ ] Explicar que ChatGPT puede crear agentes y ayudar mucho.
-* [ ] No decir que Aidely es mejor que ChatGPT.
-* [ ] Decir que Aidely convierte esas posibilidades en procesos concretos para pequeños negocios.
-* [ ] Decir que el cliente no necesita aprender prompts, APIs, n8n, Make ni conectores.
-* [ ] Usar la frase:
+Estado:
 
 ```text
-ChatGPT te da la herramienta.
-Aidely te deja el proceso funcionando.
+Funcional y validado.
+```
+
+Workflows:
+
+```text
+WF1 — Hugo presupuestos rápidos
+WF2 — Hugo recordatorio de presupuestos pendientes
+WF3 — Hugo reporte de actividad
+```
+
+Regla:
+
+```text
+Hugo prepara.
+El profesional revisa y decide.
 ```
 
 ---
 
-## 18. Qué no prometer
+## 21. Hugo WF1 — Presupuestos rápidos
 
-No decir:
-
-* [ ] “La IA lo hace todo.”
-* [ ] “Esto funciona para cualquier empresa automáticamente.”
-* [ ] “Conectamos cualquier sistema sin problema.”
-* [ ] “No hace falta revisar nada.”
-* [ ] “Enviamos presupuestos automáticamente.”
-* [ ] “Gestionamos facturas reales desde el primer día.”
-* [ ] “Controlamos stock exacto.”
-* [ ] “Cumplimos todo legalmente sin revisar el caso.”
-
-Mejor decir:
+Estructura validada:
 
 ```text
-Aidely prepara, ordena y avisa.
-Tú revisas y decides.
+Disparador manual
+↓
+Solicitud demo Hugo
+↓
+Analizar solicitud Hugo
+↓
+Preparar presupuesto Hugo
+├── Create a record Airtable
+├── Crear borrador Gmail Hugo
+└── Telegram Hugo Aidely
 ```
 
----
+Checklist:
 
-## 19. Primeros pilotos
-
-Antes de ofrecer piloto:
-
-* [ ] Tener claro el alcance.
-* [ ] Tener claro qué datos se usarán.
-* [ ] Evitar datos sensibles.
-* [ ] Evitar ngrok.
-* [ ] Usar n8n Cloud, Make o infraestructura estable.
-* [ ] Separar datos del cliente.
-* [ ] Explicar que las acciones serán revisables.
-* [ ] Cobrar siempre algo por el piloto.
-* [ ] Definir duración del piloto.
-* [ ] Definir qué se considera éxito.
-* [ ] Definir qué no está incluido.
+* [ ] Disparador manual funciona.
+* [ ] Solicitud demo Hugo genera datos de prueba.
+* [ ] Gemini analiza la solicitud.
+* [ ] Preparar presupuesto Hugo genera JSON limpio.
+* [ ] Airtable guarda en tabla `Hugo Presupuestos`.
+* [ ] Gmail crea borrador revisable.
+* [ ] Telegram Hugo avisa internamente.
+* [ ] No se envía nada automáticamente al cliente.
+* [ ] No usa webhook.
+* [ ] No usa ngrok.
+* [ ] El workflow queda en modo manual para demo interna.
 
 ---
 
-## 20. Pricing inicial orientativo
+## 22. Hugo WF1 — Campos clave generados
 
-* [ ] Diagnóstico inicial gratuito o simbólico.
-* [ ] Piloto de 30 días desde 49€.
-* [ ] Instalación básica 99€ - 149€.
-* [ ] Mensualidad por empleado sencillo 49€ - 79€/mes.
-* [ ] Pack de 2 empleados 99€ - 129€/mes.
-* [ ] No regalar instalaciones completas.
-* [ ] No aceptar clientes que pidan todo por muy poco.
-* [ ] Mantener precios accesibles.
+El nodo `Preparar presupuesto Hugo` debe generar:
+
+* [ ] presupuesto_id
+* [ ] fecha_entrada
+* [ ] origen
+* [ ] canal_entrada
+* [ ] empleado_digital
+* [ ] nombre_cliente
+* [ ] teléfono
+* [ ] email
+* [ ] negocio_profesional
+* [ ] tipo_profesional
+* [ ] zona
+* [ ] solicitud_original
+* [ ] tipo_trabajo
+* [ ] descripcion_trabajo
+* [ ] urgencia
+* [ ] materiales_estimados
+* [ ] horas_estimadas
+* [ ] rango_precio_orientativo
+* [ ] datos_faltantes
+* [ ] nivel_confianza
+* [ ] resumen_interno
+* [ ] accion_recomendada
+* [ ] estado_presupuesto = borrador_preparado
+* [ ] borrador_preparado = si
+* [ ] borrador_enviado = no
+* [ ] recordatorio_enviado = no
+* [ ] reporte_incluido = no
+* [ ] estado_revision = pendiente_revision
+* [ ] asunto_email
+* [ ] cuerpo_email
+* [ ] mensaje_telegram
 
 ---
 
-## 21. Checklist Git
+## 23. Hugo Airtable — Tabla Presupuestos
+
+Tabla:
+
+```text
+Hugo Presupuestos
+```
+
+Campos esperados:
+
+* [ ] Presupuesto ID
+* [ ] Fecha entrada
+* [ ] Empleado digital
+* [ ] Origen
+* [ ] Canal entrada
+* [ ] Nombre cliente
+* [ ] Teléfono
+* [ ] Email
+* [ ] Zona
+* [ ] Negocio profesional
+* [ ] Tipo profesional
+* [ ] Solicitud original
+* [ ] Tipo trabajo
+* [ ] Descripción trabajo
+* [ ] Urgencia
+* [ ] Materiales estimados
+* [ ] Horas estimadas
+* [ ] Precio
+* [ ] Datos faltantes
+* [ ] Estado presupuesto
+* [ ] Borrador preparado
+* [ ] Borrador enviado
+* [ ] Nivel confianza
+* [ ] Resumen interno
+* [ ] Acción recomendada
+* [ ] Asunto email
+* [ ] Cuerpo email
+* [ ] Mensaje Telegram
+* [ ] Recordatorio enviado
+* [ ] Fecha recordatorio
+* [ ] Reporte incluido
+* [ ] Estado revisión
+
+---
+
+## 24. Hugo WF2 — Recordatorio de presupuestos pendientes
+
+Estructura validada:
+
+```text
+Schedule Trigger
+↓
+Buscar presupuestos pendientes Hugo
+↓
+Preparar recordatorio Hugo
+↓
+Avisar recordatorio Hugo
+↓
+Marcar recordatorio Hugo
+```
+
+Filtro esperado:
+
+```text
+AND({Estado presupuesto} = "borrador_preparado", {Borrador enviado} = "no", {Recordatorio enviado} = "no", {Estado revisión} = "pendiente_revision")
+```
+
+Checklist:
+
+* [ ] Search records encuentra presupuestos pendientes.
+* [ ] No encuentra presupuestos ya recordados.
+* [ ] Preparar recordatorio Hugo genera mensaje claro.
+* [ ] Telegram Hugo recibe aviso.
+* [ ] Mensaje incluye cliente.
+* [ ] Mensaje incluye teléfono.
+* [ ] Mensaje incluye email.
+* [ ] Mensaje incluye trabajo.
+* [ ] Mensaje incluye precio pendiente de revisión.
+* [ ] Mensaje incluye acción recomendada.
+* [ ] Airtable marca Recordatorio enviado = si.
+* [ ] Airtable guarda Fecha recordatorio.
+* [ ] No duplica recordatorios.
+
+---
+
+## 25. Hugo WF3 — Reporte de actividad
+
+Estructura validada:
+
+```text
+Disparador reporte Hugo
+↓
+Buscar presupuestos del día Hugo
+↓
+Crear reporte Hugo
+↓
+Enviar reporte Hugo
+```
+
+Filtro esperado:
+
+```text
+IS_SAME({Fecha entrada}, TODAY(), 'day')
+```
+
+Checklist:
+
+* [ ] Search records encuentra presupuestos del día.
+* [ ] Crear reporte Hugo cuenta presupuestos revisados.
+* [ ] Cuenta borradores preparados.
+* [ ] Cuenta marcados como enviados.
+* [ ] Cuenta pendientes de revisión.
+* [ ] Cuenta recordatorios enviados.
+* [ ] Cuenta pendientes de datos.
+* [ ] Cuenta revisados.
+* [ ] Cuenta descartados.
+* [ ] Detecta registros sin estado de revisión.
+* [ ] Lista presupuestos preparados.
+* [ ] Lista pendientes de revisión.
+* [ ] Telegram Hugo envía reporte.
+* [ ] El reporte se entiende.
+* [ ] No usa Gemini.
+* [ ] No gasta tokens de IA.
+
+---
+
+## 26. Seguridad y límites de Hugo
+
+Hugo no debe:
+
+* [ ] Enviar presupuestos automáticamente.
+* [ ] Confirmar precios finales.
+* [ ] Confirmar disponibilidad.
+* [ ] Cerrar ventas.
+* [ ] Emitir facturas.
+* [ ] Cobrar.
+* [ ] Borrar registros.
+* [ ] Trabajar con datos sensibles.
+* [ ] Usar ngrok para clientes reales.
+
+Hugo sí puede:
+
+* [ ] Preparar borradores.
+* [ ] Guardar registros.
+* [ ] Avisar internamente.
+* [ ] Recordar pendientes.
+* [ ] Generar reportes.
+* [ ] Ayudar a responder más rápido.
+
+---
+
+## 27. Validación en Vercel
+
+Después de cada cambio en landing:
+
+* [ ] Hacer commit.
+* [ ] Hacer push.
+* [ ] Esperar despliegue Vercel.
+* [ ] Abrir landing pública.
+* [ ] Validar hero.
+* [ ] Validar Demo Hugo.
+* [ ] Validar Demo Vera.
+* [ ] Validar formulario.
+* [ ] Validar diseño móvil si es posible.
+* [ ] Confirmar que no hay errores visibles.
+
+---
+
+## 28. Checklist Git
 
 Antes de cerrar cualquier bloque:
 
@@ -419,87 +749,48 @@ nothing to commit, working tree clean
 
 ---
 
-## 22. Ruta actual de trabajo
+## 29. Documentación relacionada
 
-### Bloque 1 — Estrategia
+Archivos principales:
 
-* [x] Crear `docs/estrategia-aidely-negocios-pequenos.md`.
-* [x] Revisar contenido.
-* [x] Corregir ubicación si se creó carpeta duplicada.
-* [x] Commit.
-* [x] Push.
+```text
+docs/README-AIDELY-LEO.md
+docs/checklist-demo-aidely-leo.md
+docs/hugo-presupuestos-rapidos.md
+docs/estrategia-aidely-negocios-pequenos.md
+docs/Aidely_Leo_MVP_Documentacion_v1.md
+```
 
----
+Checklist:
 
-### Bloque 2 — Documentación
-
-* [x] Actualizar `README-AIDELY-LEO.md`.
-* [ ] Actualizar `checklist-demo-aidely-leo.md`.
-* [ ] Actualizar `Aidely_Leo_MVP_Documentacion_v1.md`.
-* [ ] Regenerar PDF si corresponde.
-* [ ] Actualizar NotebookLM con el nuevo enfoque.
-
----
-
-### Bloque 3 — Landing
-
-* [ ] Revisar hero principal.
-* [ ] Revisar subtítulo.
-* [ ] Revisar sección de empleados.
-* [ ] Revisar Demo Vera.
-* [ ] Revisar precios.
-* [ ] Revisar formulario.
-* [ ] Revisar guion comercial.
-* [ ] Ajustar texto para autónomos y pequeños negocios.
+* [ ] README actualizado.
+* [ ] Checklist actualizado.
+* [ ] Documento Hugo actualizado.
+* [ ] Documento estrategia actualizado.
+* [ ] PDF actualizado si corresponde.
+* [ ] NotebookLM actualizado si corresponde.
 
 ---
 
-### Bloque 4 — Diseño de Hugo
+## 30. Cierre de jornada
 
-* [ ] Crear `docs/hugo-presupuestos-rapidos.md`.
-* [ ] Definir objetivo.
-* [ ] Definir cliente ideal.
-* [ ] Definir problema.
-* [ ] Definir datos mínimos.
-* [ ] Definir flujo.
-* [ ] Definir herramientas.
-* [ ] Definir riesgos.
-* [ ] Definir mitigaciones.
-* [ ] Definir versión demo.
-* [ ] Definir versión piloto.
-* [ ] Definir mensajes.
-* [ ] Definir formato de presupuesto.
-* [ ] Definir validación.
+Antes de cerrar:
 
----
+* [ ] Git limpio.
+* [ ] Vercel validado.
+* [ ] n8n workflows guardados.
+* [ ] No dejar ejecuciones innecesarias activas.
+* [ ] No gastar Gemini sin necesidad.
+* [ ] Si hay webhooks locales, revisar ngrok.
+* [ ] Apuntar próximo paso.
 
-### Bloque 5 — Demo Hugo
+Estado ideal:
 
-* [ ] Decidir formulario o audio.
-* [ ] Diseñar plantilla de presupuesto.
-* [ ] Crear datos ficticios.
-* [ ] Crear flujo de prueba.
-* [ ] Generar borrador revisable.
-* [ ] Validar que no envía nada automáticamente.
-
----
-
-### Bloque 6 — Infraestructura para piloto
-
-* [ ] Decidir n8n Cloud, Make o VPS.
-* [ ] Evitar ngrok para cliente real.
-* [ ] Separar datos por cliente.
-* [ ] Definir consentimiento básico.
-* [ ] Crear documento de alcance.
-* [ ] Crear checklist de instalación.
-
----
-
-### Bloque 7 — Validación comercial
-
-* [ ] Hablar con 3 oficios.
-* [ ] Hablar con 3 peluquerías/estética.
-* [ ] Preguntar por presupuestos, citas, clientes perdidos y tareas repetitivas.
-* [ ] No vender en la primera conversación.
-* [ ] Registrar respuestas.
-* [ ] Elegir primer piloto pagado.
+```text
+Leo funcional.
+Hugo funcional.
+Vera visual.
+Landing validada.
+Documentación actualizada.
+GitHub y Vercel al día.
+```
